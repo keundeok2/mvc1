@@ -85,4 +85,16 @@ public class FrontControllerServletV5 extends HttpServlet {
     private MyView viewResolver(String viewName) {
         return new MyView("/WEB-INF/views/" + viewName + ".jsp");
     }
+
+    /*
+        Spring MVC의 구조
+        1. 핸들러 조회
+        2. 핸들러 어댑터 조회 - 핸들러를 처리할 수 있는 어댑터
+        3. 핸들러 어댑터 실행
+        4. 핸들러 어댑터를 통하여 핸드러 실행
+        5. ModelAndView를 반환
+        6. 뷰 리졸버를 통해 뷰 찾기
+        7. 뷰 반환
+        8. 뷰 렌더링
+     */
 }
