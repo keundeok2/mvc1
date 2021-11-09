@@ -44,7 +44,7 @@ public class RequestBodyStringController {
      * HttpEntity: HTTP header, body 정보를 편라하게 조회
      * - 메시지 바디 정보를 직접 조회(@RequestParam X, @ModelAttribute X)
      * - HttpMessageConverter 사용 -> StringHttpMessageConverter 적용
-     *
+     * <p>
      * 응답에서도 HttpEntity 사용 가능
      * - 메시지 바디 정보 직접 반환(view 조회X)
      * - HttpMessageConverter 사용 -> StringHttpMessageConverter 적용
@@ -57,12 +57,9 @@ public class RequestBodyStringController {
     }
 
     /**
-     * @RequestBody
-     * - 메시지 바디 정보를 직접 조회(@RequestParam X, @ModelAttribute X)
+     * @RequestBody - 메시지 바디 정보를 직접 조회(@RequestParam X, @ModelAttribute X)
      * - HttpMessageConverter 사용 -> StringHttpMessageConverter 적용
-     *
-     * @ResponseBody
-     * - 메시지 바디 정보 직접 반환(view 조회X)
+     * @ResponseBody - 메시지 바디 정보 직접 반환(view 조회X)
      * - HttpMessageConverter 사용 -> StringHttpMessageConverter 적용
      */
     @ResponseBody

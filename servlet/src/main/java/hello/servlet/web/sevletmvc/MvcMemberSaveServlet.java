@@ -15,6 +15,7 @@ import java.io.IOException;
 public class MvcMemberSaveServlet extends HttpServlet {
 
     private MemberRepository memberRepository = MemberRepository.getInstance();
+
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");

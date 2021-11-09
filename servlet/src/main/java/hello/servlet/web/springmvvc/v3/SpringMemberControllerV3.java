@@ -17,13 +17,13 @@ public class SpringMemberControllerV3 {
 
     private MemberRepository memberRepository = MemberRepository.getInstance();
 
-//    @RequestMapping(value = "/new-form", method = RequestMethod.GET)
+    //    @RequestMapping(value = "/new-form", method = RequestMethod.GET)
     @GetMapping("new-form")
     public String newForm() {
         return "new-form";
     }
 
-//    @RequestMapping(method = RequestMethod.GET)
+    //    @RequestMapping(method = RequestMethod.GET)
     @GetMapping
     public String members(Model model) {
         List<Member> members = memberRepository.findAll();
@@ -33,11 +33,11 @@ public class SpringMemberControllerV3 {
         return "members";
     }
 
-//    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    //    @RequestMapping(value = "/save", method = RequestMethod.POST)
     @PostMapping("/save")
     public String save(@RequestParam("username") String username,
-                             @RequestParam("age") int age,
-                             Model model) {
+                       @RequestParam("age") int age,
+                       Model model) {
 
         Member member = new Member(username, age);
         Member savedMember = memberRepository.save(member);
